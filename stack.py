@@ -1,5 +1,4 @@
 # node initializer 
-from hashlib import new
 
 
 class Node : 

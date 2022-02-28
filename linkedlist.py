@@ -1,4 +1,3 @@
-from traceback import print_list
 
 
 class Node:
