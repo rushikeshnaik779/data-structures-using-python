@@ -11,6 +11,7 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 
+
     def insert_bst(self, value):
         new_node = Node(value)
         if self.root is None: 
@@ -48,6 +49,15 @@ class BinarySearchTree:
             
         return False 
 
+
+    def min_value_node(self, current_node):
+        while current_node.left is not None : 
+            current_node = current_node.left 
+        return current_node.value
+
+
+    
+
     
 
 my_tree = BinarySearchTree()
@@ -59,8 +69,8 @@ my_tree.insert_bst(18)
 my_tree.insert_bst(27)
 my_tree.insert_bst(52)
 my_tree.insert_bst(82)
-print(my_tree.contains(0))
-print(my_tree.contains(82))
+print(my_tree.min_value_node(my_tree.root))
+print(my_tree.min_value_node(my_tree.root.right))
 
 
 
